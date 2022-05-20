@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Card} from './components/Card';
+import doria from './img/doria.jpg';
+import beef from './img/beef.jpg';
+import ramen from './img/noodle.jpg';
+import './style/style.css';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Card img={doria}
+      title='チーズドリア'
+      description='1か月に1度は食べているチーズドリアです。熱いので気をつけましょう。'
+      />
+
+      <Card
+        img={beef}
+        title="ホルモン焼き"
+        description="大好きなホルモン焼きです。よくかんで食べましょう。"
+      />
+
+      <Card
+        img={ramen}
+        title="しょうゆラーメン"
+        description="日本の国民食ラーメン。しょうゆ派です。"
+      />
     </div>
   );
 }
